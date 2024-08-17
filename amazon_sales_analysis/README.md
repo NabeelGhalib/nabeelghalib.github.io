@@ -26,6 +26,6 @@ The Google Colab Notebook includes the following sections:
 This analysis provided valuable insights into Amazon's sales data, highlighting trends and areas for improvement. The findings can be used to enhance decision-making processes and optimize sales strategies.
 
 ## How to Access the Project
-- **Project:** You can view the detailed analysis [here](amazon_sales_analysis.ipynb). The notebook contains the code, visualizations, and explanations.
+- **Project:** You can view the detailed analysis [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/amazon_sales_analysis/Amazon_Sales_Analysis.pdf). The notebook contains the code, visualizations, and explanations.
 
 
