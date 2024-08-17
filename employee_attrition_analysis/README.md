@@ -12,4 +12,4 @@ Analysis of employee attrition to identify key trends and causes.
 - Created dashboards in Tableau to visualize attrition trends.
 
 **Link to Project:**
-[View Project](link_to_github_or_report)
+[View Project](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/employee_attrition_analysis/Employee_attrition_analysis_markdown.pdf)
