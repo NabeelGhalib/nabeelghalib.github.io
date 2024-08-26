@@ -1,5 +1,8 @@
 # Customer Segmentation Analysis
 
+## Project Link
+You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/customer_segmentation/Customer_Segmentation_Final.ipynb)
+
 ## Overview
 This project focuses on analyzing customer data to uncover trends, patterns, and key insights. The primary goal is to segment customers based on various factors using K-means clustering algorithms, which can help businesses improve their strategies and performance.
 
@@ -28,5 +31,4 @@ The Jupyter Notebook includes the following sections:
 The customer segmentation analysis offered valuable insights into the customer base, revealing distinct segments that can be targeted for more effective marketing and business strategies. The findings support data-driven decision-making and help optimize customer engagement and satisfaction.
 
 
-## Project Link
-You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/customer_segmentation/Customer_Segmentation_Final.ipynb)
+
