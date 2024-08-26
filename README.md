@@ -61,5 +61,5 @@ To view the project [click here](https://github.com/NabeelGhalib/nabeelghalib.gi
 
 ## Contact
 
-Feel free to connect with me via [LinkedIn](http://www.linkedin.com/in/nabeelghalib) or reach out to me at (nabeelghalib95@gmail.com)
+Feel free to connect with me via [LinkedIn](http://www.linkedin.com/in/nabeelghalib) or reach out to me at nabeelghalib95@gmail.com
 
