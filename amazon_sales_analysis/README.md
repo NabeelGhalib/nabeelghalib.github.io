@@ -1,5 +1,8 @@
 # Amazon Sales Analysis
 
+## Project Link
+You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/amazon_sales_analysis/Amazon_Sales_Analysis.pdf). 
+
 ## Overview
 This project involves analyzing Amazon sales data to identify trends, patterns, and key insights that can help improve business performance. The analysis was performed using Python in Google Colab.
 
@@ -25,7 +28,5 @@ The Google Colab Notebook includes the following sections:
 ## Conclusion
 This analysis provided valuable insights into Amazon's sales data, highlighting trends and areas for improvement. The findings can be used to enhance decision-making processes and optimize sales strategies.
 
-## Project Link
-You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/amazon_sales_analysis/Amazon_Sales_Analysis.pdf). 
 
 
