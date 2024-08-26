@@ -1,5 +1,8 @@
 # Employee Attrition Analysis
 
+## Project Link
+To view the project [click here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/employee_attrition_analysis/Employee_attrition_analysis_markdown.pdf)
+
 ## Overview
 This project focuses on analyzing employee attrition data to uncover patterns and trends affecting employee turnover. The analysis was performed using RStudio.
 
@@ -25,6 +28,5 @@ The RStudio Project includes the following sections:
 ## Conclusion
 This analysis offered valuable insights into factors affecting employee attrition, highlighting areas that could benefit from targeted interventions. The recommendations aim to enhance retention strategies and improve overall employee satisfaction.
 
-## Project Link
-To view the project [click here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/employee_attrition_analysis/Employee_attrition_analysis_markdown.pdf)
+
 
