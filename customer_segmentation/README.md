@@ -28,4 +28,5 @@ The Jupyter Notebook includes the following sections:
 The customer segmentation analysis offered valuable insights into the customer base, revealing distinct segments that can be targeted for more effective marketing and business strategies. The findings support data-driven decision-making and help optimize customer engagement and satisfaction.
 
 
-## Project: You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/customer_segmentation/Customer_Segmentation_Final.ipynb)
+## Project 
+You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/customer_segmentation/Customer_Segmentation_Final.ipynb)
