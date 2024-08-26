@@ -25,6 +25,6 @@ The RStudio Project includes the following sections:
 ## Conclusion
 This analysis offered valuable insights into factors affecting employee attrition, highlighting areas that could benefit from targeted interventions. The recommendations aim to enhance retention strategies and improve overall employee satisfaction.
 
-## Project
-You can view the project [click here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/employee_attrition_analysis/Employee_attrition_analysis_markdown.pdf)
+## Project Link
+To view the project [click here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/employee_attrition_analysis/Employee_attrition_analysis_markdown.pdf)
 
