@@ -1,5 +1,8 @@
 # House Price Prediction
 
+## Project Link
+You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/house_price_prediction/Housing_LRM_Final.ipynb)
+
 ## Overview
 This project involves predicting house prices using various regression techniques, including Linear Regression, Lasso, and Ridge. The aim is to create accurate models that can estimate property prices based on key features, aiding in better decision-making in the real estate market.
 
@@ -30,6 +33,5 @@ The Jupyter Notebook includes the following sections:
 ## Conclusion
 The house price prediction project demonstrated the effectiveness of various regression techniques in estimating property values. The models provide valuable insights that can be used by real estate professionals to make informed decisions. The optimized models achieved high accuracy, making them suitable for practical use.
 
-## Project Link
-You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/house_price_prediction/Housing_LRM_Final.ipynb)
+
 
