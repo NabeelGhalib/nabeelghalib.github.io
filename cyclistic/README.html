@@ -1,1 +1,474 @@
+<h1 id="cyclistic-a-bike-share-analysis">Cyclistic - A bike share analysis</h1>
+<h1 id="name-nabeel-ghalib">Name - Nabeel Ghalib</h1>
+<h3 id="project-overview">Project Overview</h3>
+<hr>
+<p>This Data Analysis project aims to provide insights into usage of the cyclistic program by the members and casual users. By Analyzing various aspects of the cycle trips data we can identify trends, make Data-driven recommendation to improve the company. </p>
+<h3 id="scenario">Scenario</h3>
+<hr>
+<p>In the given scenario, I am a data analyst working in the marketing analyst team at Cyclistic,a bike share company in Chicago.
+The director of marketing believes the company’s future success depends on maximizing the number of annual memberships.
+Therefore, my team wants to understand how casual riders and annual members use Cyclistic bikes differently.</p>
+<h3 id="key-stakholders">Key Stakholders</h3>
+<h4 id="primary-stakeholders-">Primary Stakeholders:</h4>
+<p>Lily Moreno - Director of Marketing,
+Cyclistic Executive Team</p>
+<h4 id="secondary-stakeholders-">Secondary Stakeholders:</h4>
+<p>Marketing Analytics Team </p>
+<h3 id="data-analysis-phases">Data Analysis Phases</h3>
+<hr>
+<ul>
+<li><h4 id="ask">ASK</h4>
+</li>
+<li><h4 id="prepare">PREPARE</h4>
+</li>
+<li><h4 id="process">PROCESS</h4>
+</li>
+<li><h4 id="analyze">ANALYZE</h4>
+</li>
+<li><h4 id="share">SHARE</h4>
+</li>
+<li><h4 id="act">ACT</h4>
+</li>
+</ul>
+<h3 id="ask">Ask</h3>
+<hr>
+<h4 id="identify-the-business-task">Identify the business task</h4>
+<p>The key business task in this case is to discover how casual riders and Cyclistic members use their rental bikes differently. Both the Director of Marketing as well as finance analysts have concluded that annual members are more profitable.</p>
+<p>Therefore, the results of this analysis will be used to design a new marketing strategy to convert casual riders to annual members.</p>
+<ol>
+<li>How do members and casual riders use Cyclistic bikes differently?</li>
+<li>Why would casual riders buy Cyclistic annual memberships?</li>
+<li>How can Cyclistic use digital media to influence casual riders to become members?</li>
+</ol>
+<h3 id="preparing-data">Preparing Data</h3>
+<hr>
+<h3 id="data-sources-used">Data Sources Used</h3>
+<p>The datasets used in this analysis have been made available by Motivate Internation Inc. </p>
+<p>This is public data that you can use to explore how different customer types are using Cyclistic bikes. </p>
+<p>Note: Cyclistic is a fictional company, hence the datasets contain the name of a different company. For the purpose of this analysis, the given datasets can be used to answer the business task </p>
+<h3 id="tools-used">Tools Used</h3>
+<ul>
+<li>SQL - PostgreSQL - Data Cleaning and Data Analysis.</li>
+<li>Tableau - Data Visualization.</li>
+</ul>
+<h3 id="creating-tables-and-importing-the-datasets">Creating tables and importing the datasets</h3>
+<ul>
+<li>I am using 6 months of data (from 2020-04 to 2020-09) </li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> cycle_trip_04(
+ride_id <span class="hljs-built_in">varchar</span>,
+rideable_type <span class="hljs-built_in">varchar</span>,
+started_at <span class="hljs-keyword">timestamp</span>,
+ended_at <span class="hljs-keyword">timestamp</span>,
+start_station_name <span class="hljs-built_in">varchar</span>,
+start_station_id <span class="hljs-built_in">integer</span>,
+end_station_name <span class="hljs-built_in">varchar</span>,
+end_station_id <span class="hljs-built_in">integer</span>,
+start_lat <span class="hljs-built_in">numeric</span>,
+start_lng <span class="hljs-built_in">numeric</span>,
+end_lat <span class="hljs-built_in">numeric</span>,
+end_lng <span class="hljs-built_in">numeric</span>,
+member_casual <span class="hljs-built_in">varchar</span>);
+
+copy cycle_trip_04 from 'F:\Data Analytics\Case study\Cyclistic\202004-divvy-tripdata.csv' csv header;
+</code></pre>
+<p>uploaded all the other datasets by the above method</p>
+<h3 id="processing-data-data-cleaning-">Processing data (Data Cleaning)</h3>
+<hr>
+<ul>
+<li>Check for null values</li>
+<li>Check for the formats</li>
+<li>Check for Duplicates</li>
+<li>Check for White spaces</li>
+<li>Check for incomplete and wrong data(spelling mistakes,irrelevant data etc.)</li>
+</ul>
+<h3 id="cleaning">Cleaning</h3>
+<ol>
+<li>I can find out the time it takes for every ride to complete by subtracting started_at from ended_at</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> *, (ended_at - started_at) <span class="hljs-keyword">as</span> ride_length
+<span class="hljs-keyword">from</span> cycle_trip_04
+</code></pre>
+<p>By doing this I found that there are some negative values in ride_length in all the datasets,
+i.e. ended_at time was less than started_at ex- started_at - &#39;2020-04-02 18:30:00&#39; , ended_at - &#39;2020-04-02 18:25:00&#39; this is not possible so I gathered that the values were entered in wrong columns.</p>
+<ol>
+<li>So I swapped the values of ended_at and started_at where the difference was in negative.</li>
+</ol>
+<pre><code class="lang-sql">
+update cycle_trip_04
+<span class="hljs-keyword">set</span> started_at <span class="hljs-comment">= ended_at,</span>
+    ended_at <span class="hljs-comment">= started_at</span>    
+where <span class="hljs-comment">(ended_at-started_at) &lt;</span> <span class="hljs-comment">'00:00:00'</span>
+</code></pre>
+<p>and did that for all the other datasets.</p>
+<ol>
+<li>By looking at the datasets I know that all 6 datasets that I am going to work with have matching column names and those columns have same data types, so I combine them into one using union all</li>
+</ol>
+<pre><code class="lang-sql">
+create view cycletripsall <span class="hljs-keyword">as</span>
+
+(select * from cycle_trip_04
+<span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">all</span></span>
+select * from cycle_trip_05
+<span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">all</span></span>
+select * from cycle_trip_06
+<span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">all</span></span>
+select * from cycle_trip_07
+<span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">all</span></span>
+select * from cycle_trip_08
+<span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">all</span></span>
+select * from cycle_trip_09)
+</code></pre>
+<ol>
+<li>Then I checked for null values, incomplete data and spelling mistakes in all the columns.</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> cycletripsall
+<span class="hljs-keyword">where</span> started_at <span class="hljs-keyword">is</span> <span class="hljs-literal">null</span>
+
+<span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> cycletripsall
+<span class="hljs-keyword">where</span> ended_at <span class="hljs-keyword">is</span> <span class="hljs-literal">null</span>
+
+<span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> cycletripsall
+<span class="hljs-keyword">where</span> ride_id <span class="hljs-keyword">is</span> <span class="hljs-literal">null</span>
+</code></pre>
+<p>and so on.</p>
+<ol>
+<li>Finding out the number of characters present for every ride_id</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> <span class="hljs-keyword">length</span>(ride_id) <span class="hljs-keyword">from</span> cycletripsall
+</code></pre>
+<p>There are 16 characters.</p>
+<ol>
+<li>By knowing this we can check if there are ids which does not have same no. of characters.</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-function"><span class="hljs-keyword">select</span> ride_id <span class="hljs-keyword">from</span> cycletripsall
+<span class="hljs-keyword">where</span> <span class="hljs-title">length</span>(<span class="hljs-params">ride_id</span>) !</span>= <span class="hljs-string">'16'</span>
+</code></pre>
+<p>There were none.</p>
+<ol>
+<li>Making ride_length and Day of the week columns</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> *, (ended_at-started_at) <span class="hljs-keyword">as</span> ride_length, to_char(started_at, <span class="hljs-string">'DY'</span>) <span class="hljs-keyword">as</span> started_at_day
+<span class="hljs-keyword">from</span> cycletripsall
+</code></pre>
+<ol>
+<li>Now saving the table.</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">create</span> <span class="hljs-keyword">view</span> cycletrips <span class="hljs-keyword">as</span>
+<span class="hljs-keyword">select</span> *, (ended_at-started_at) <span class="hljs-keyword">as</span> ride_length, to_char(started_at, <span class="hljs-string">'DY'</span>) <span class="hljs-keyword">as</span> day_started_at
+<span class="hljs-keyword">from</span> cycletripsall
+</code></pre>
+<p>Now the data is ready for analysis.</p>
+<h3 id="analyze">Analyze</h3>
+<hr>
+<ol>
+<li>Finding  users total rides, average ride_length, minimum ride_length and maximum ride_length .</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span>
+member_casual,
+<span class="hljs-keyword">count</span>(member_casual) <span class="hljs-keyword">as</span> total,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length,
+<span class="hljs-keyword">avg</span>(ride_length) <span class="hljs-keyword">as</span> avg_ride_length
+
+<span class="hljs-keyword">from</span> cycletrips
+
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+</code></pre>
+<h4 id="output">Output</h4>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/781d56c9-68d7-497a-87c7-053c7b70f522" alt="Screenshot (96)"></p>
+<ol>
+<li>Finding number of rides for every day of the week for casual and member users</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> member_casual,
+started_at_day,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> rides
+
+<span class="hljs-keyword">from</span> cycletrips
+
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual,started_at_day
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> member_casual,rides <span class="hljs-keyword">desc</span>
+</code></pre>
+<h4 id="output">Output</h4>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/ecab46cd-8bdb-4108-92e5-33685d708668" alt="Screenshot (58)"></p>
+<ol>
+<li><p>Finding the total number of casual users and members who ride for the following time intervals:</p>
+</li>
+<li><p>Between 1 min to 10 mins</p>
+</li>
+<li>Between 10.01 mins to 20 mins</li>
+<li>Between 20.01 mins to 30 mins</li>
+<li>Between 30.01 mins to 40 mins</li>
+<li>Between 40.01 mins to 50 mins</li>
+<li>Between 50.01 mins to 1 hour
+and so on</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:01:00'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:10:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:10:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:20:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:20:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:30:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:30:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:40:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:40:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:50:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:50:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'01:00:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'01:00:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'02:00:00'</span> 
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'02:00:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'03:00:00'</span> 
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'03:00:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'04:00:00'</span> 
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'04:00:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'23:59:59'</span> 
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+
+<span class="hljs-keyword">select</span> member_casual , 
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length &gt;= <span class="hljs-string">'1 day'</span>
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual
+</code></pre>
+<h4 id="output">Output</h4>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/f06daf70-a976-47b7-b9e2-ec89d6de2f64" alt="Screenshot (111)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/3d460e74-fd2e-4bf4-8ca5-626564f06ff9" alt="Screenshot (112)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/b74a744c-03de-4e7d-964b-127b73edc89f" alt="Screenshot (113)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/a351005f-cd4d-48da-a0e9-c71e9356136d" alt="Screenshot (114)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/61481c5d-98aa-4cf8-9826-afab1f1e7a70" alt="Screenshot (115)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/c08a6e2f-8ff1-4c72-bc66-8f273b0750a5" alt="Screenshot (116)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/f21e4421-f6ed-473f-bdd9-28432c814eb6" alt="Screenshot (117)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/5b192519-c562-46e5-b859-57e233de0a3b" alt="Screenshot (118)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/515ccf3f-8687-4769-bac7-edbb98274629" alt="Screenshot (122)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/54ffafc1-b092-4483-a4e6-fd7d1853fa43" alt="Screenshot (119)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/a72cd44e-a4e7-4077-ac4e-c03ee5f4b4f6" alt="Screenshot (120)"></p>
+<p>By Analyzing the data we found out that the most users ride between these durations:</p>
+<ul>
+<li>1 min to 10 mins</li>
+<li>10 mins to 20 mins</li>
+<li>20 mins to 30 mins</li>
+<li>30 mins to 40 mins</li>
+<li>40 mins to 50 mins</li>
+<li>1 hour to 2 hour</li>
+</ul>
+<ol>
+<li>Now analyzing these duration for every day of the week.</li>
+</ol>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> member_casual , started_at_day,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:01:00'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:10:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual,started_at_day
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> member_casual, total_count <span class="hljs-keyword">desc</span>
+
+<span class="hljs-keyword">select</span> member_casual , started_at_day,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:10:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:20:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual,started_at_day
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> member_casual, total_count <span class="hljs-keyword">desc</span>
+
+<span class="hljs-keyword">select</span> member_casual , started_at_day,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:20:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:30:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual,started_at_day
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> member_casual, total_count <span class="hljs-keyword">desc</span>
+
+<span class="hljs-keyword">select</span> member_casual , started_at_day,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:30:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:40:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual,started_at_day
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> member_casual, total_count <span class="hljs-keyword">desc</span>
+
+<span class="hljs-keyword">select</span> member_casual , started_at_day,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'00:40:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'00:50:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual,started_at_day 
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> member_casual, total_count <span class="hljs-keyword">desc</span>
+
+<span class="hljs-keyword">select</span> member_casual , started_at_day,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> total_count,
+<span class="hljs-keyword">min</span>(ride_length) <span class="hljs-keyword">as</span> min_ride_length,
+<span class="hljs-keyword">max</span>(ride_length) <span class="hljs-keyword">as</span> max_ride_length
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> ride_length <span class="hljs-keyword">between</span> <span class="hljs-string">'01:00:01'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'02:00:00'</span>  
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member_casual,started_at_day  
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> member_casual, total_count <span class="hljs-keyword">desc</span>
+</code></pre>
+<h3 id="output">Output</h3>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/af942048-a4f0-4f49-ab73-5a619f831779" alt="Screenshot (89)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/505ec36b-0ccd-4685-86ba-999fe798be47" alt="Screenshot (90)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/b352f1a1-4959-434a-b573-c308b779b923" alt="Screenshot (91)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/696cb461-2cb7-42d4-b7fc-6e022e1ceb21" alt="Screenshot (92)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/0fcdd934-8885-47f0-9e62-11e3f349257b" alt="Screenshot (93)">
+<img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/61244692-0536-47c7-81b3-d5d8971ae796" alt="Screenshot (94)"></p>
+<p>The most number of trips were from the following days Saturday, Sunday and Friday.</p>
+<ol>
+<li>Now finding out the top 10 routes used by the users.</li>
+</ol>
+<pre><code class="lang-sql">
+- For casual users 
+
+<span class="hljs-keyword">select</span> 
+start_station_name,
+end_station_name,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> rides
+
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> member_casual = <span class="hljs-string">'casual'</span> <span class="hljs-keyword">and</span> start_station_name <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span> <span class="hljs-keyword">and</span> end_station_name <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>
+
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> start_station_name,end_station_name
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> rides <span class="hljs-keyword">desc</span>
+
+<span class="hljs-keyword">limit</span> <span class="hljs-number">10</span>
+
+- <span class="hljs-keyword">For</span> members
+
+<span class="hljs-keyword">select</span> 
+start_station_name,
+end_station_name,
+<span class="hljs-keyword">count</span>(ride_id) <span class="hljs-keyword">as</span> rides
+
+<span class="hljs-keyword">from</span> cycletrips
+<span class="hljs-keyword">where</span> member_casual = <span class="hljs-string">'casual'</span> <span class="hljs-keyword">and</span> start_station_name <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span> <span class="hljs-keyword">and</span> end_station_name <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>
+
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> start_station_name,end_station_name
+<span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> rides <span class="hljs-keyword">desc</span>
+
+<span class="hljs-keyword">limit</span> <span class="hljs-number">10</span>
+</code></pre>
+<h3 id="output">Output</h3>
+<p>Casual :</p>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/00ed4426-281e-49aa-8503-637cbce9b2e5" alt="Screenshot (99)"></p>
+<p>Member :</p>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/452f45c4-da92-41c1-a300-d9c4a40ef23c" alt="Screenshot (100)"></p>
+<h3 id="share">Share</h3>
+<hr>
+<h4 id="now-visualizing-the-analyzed-data-">Now visualizing the Analyzed Data.</h4>
+<p>1.Number of rides for every day of the week for casual and member users</p>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/a498d7ec-1489-4837-a000-eeca9550b1b9" alt="DOWALL"></p>
+<p>2.Number of rides for every ride duration</p>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/d136838f-fd31-499c-82ab-8a723b1bb23d" alt="RLCMCDashboard 1"></p>
+<p>3.Number of rides for each month</p>
+<p><img src="https://github.com/NabeelGhalib/cyclistic-case-study/assets/158058093/0737ae94-e198-4957-a0a3-dec87b6b9d61" alt="TRIPSMONTH"></p>
+<h2 id="summary-of-analysis">Summary of Analysis</h2>
+<ul>
+<li>Casual users ride for 49 minutes on average.</li>
+<li><p>Members ride for 17 minutes on average.</p>
+</li>
+<li><p>For Members, the most rides are in between these ride lengths 1 min - 10 mins, 10 mins - 20 mins, 20 mins - 30 mins.</p>
+</li>
+<li><p>For Casual users, the most rides are in between these ride lengths 1 min - 10 mins, 10 mins - 20 mins, 20 mins - 30 mins and 1 hour - 2 hours.</p>
+</li>
+<li><p>The most number of rides were on Saturday for both the users.</p>
+</li>
+<li><p>The trips are low on Monday to Thursday, increases at Friday reaches peak on Saturday with slight drop off on Sunday.</p>
+</li>
+<li><p>Members use the bikes more consistently throughout the week.</p>
+</li>
+<li>Casual users use the bike more on Saturday, Sunday and Friday.</li>
+<li><p>Casual users ride atleast 2 times longer on any day of the week than members.</p>
+</li>
+<li><p>Most of the top 10 routes of the Casual and Member users are not same.</p>
+</li>
+<li><p>The most number of rides for both the users occur in the months of June, August and September where August has most number of rides.</p>
+</li>
+</ul>
+<h1 id="act">Act</h1>
+<hr>
+<p>How do members and casual riders use Cyclistic bikes differently?</p>
+<ul>
+<li>Members use the bike for regular commuting perhaps to work or school and ride duration is comparetively shorter than casual users.</li>
+<li>Casual users ride for longer duration of time and the rides are lower on Monday through Thursday and rises on Friday reaches peak at Saturday then slight drops at Sunday.This suggests that they use the bike for leisure like sightseeing etc.</li>
+</ul>
+<h3 id="top-recommendations">Top recommendations</h3>
+<ul>
+<li><strong>Weekend only</strong>  offer - Provide an offer at a lower price than the annual membership price where they can use the cycle for these 3 days i.e Friday, Saturday and Sunday which will attract the casual users to convert to annual member.</li>
+<li><strong>Ride duration</strong> offer - an offer for casual users who ride for these durations 1) Between 1 min - 30 mins 2) Between 1 hour - 2 hours.</li>
+<li><strong>Top Routes</strong> offer - an offer based on the top 10 routes used by casual users.</li>
+</ul>
 
