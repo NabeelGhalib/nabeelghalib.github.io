@@ -31,5 +31,5 @@ The Jupyter Notebook includes the following sections:
 The house price prediction project demonstrated the effectiveness of various regression techniques in estimating property values. The models provide valuable insights that can be used by real estate professionals to make informed decisions. The optimized models achieved high accuracy, making them suitable for practical use.
 
 ## Project
-You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/house_price_prediction/House_Price_Prediction.pdf)](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/house_price_prediction/Housing_LRM_Final.ipynb)
+You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/house_price_prediction/Housing_LRM_Final.ipynb)
 
