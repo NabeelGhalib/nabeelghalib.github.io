@@ -5,12 +5,9 @@ To view the project [click here](https://github.com/NabeelGhalib/nabeelghalib.gi
 
 ## Tableau Dashboard Link
 
-- **Dashboard Link** - [click here](https://public.tableau.com/views/EmployeeAttritionClean/EmployeeAttritionDashboard?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
+**Dashboard Link** - [click here](https://public.tableau.com/views/EmployeeAttritionClean/EmployeeAttritionDashboard?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
 
-- **Dashboard images** 
-1. **Dashboard 1** - [click here](https://github.com/NabeelGhalib/Employee-Attrition-Analysis-md/blob/main/Employee%20Attrition%20Dashboard%201.png)
-
-2. **Dashboard 2** - [click here](https://github.com/NabeelGhalib/Employee-Attrition-Analysis-md/blob/main/Employee%20Attrition%20Dashboard%202.png)   
+**Dashboard images** - Dashboard 1 - [click here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/employee_attrition_analysis/Employee%20Attrition%20Dashboard%201.png) , Dashboard 2 - [click here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/employee_attrition_analysis/Employee%20Attrition%20Dashboard%202.png)
    
      
 ## Overview
