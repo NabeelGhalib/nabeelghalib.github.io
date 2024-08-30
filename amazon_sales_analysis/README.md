@@ -3,6 +3,12 @@
 ## Project Link
 You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/amazon_sales_analysis/Amazon_Sales_Analysis.pdf)
 
+## Tableau Dashboard Link
+
+**Dashboard Link** - [click here](https://public.tableau.com/views/Amazonsales_17130153403460/AmazonSalesAnalyticsDashboard?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
+
+**Dashboard image** - [click here](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/amazon_sales_analysis/Amazon%20Sales%20Analytics%20Dashboard.png) 
+
 ## Overview
 This project involves analyzing Amazon sales data to identify trends, patterns, and key insights that can help improve business performance. The analysis was performed using Python in Google Colab.
 
