@@ -33,7 +33,7 @@ The RStudio Project includes the following sections:
 4. **Insights and Recommendations:** Summary of key findings and suggestions for improving employee retention.
 
 ## Conclusion
-This analysis offered valuable insights into factors affecting employee attrition, highlighting areas that could benefit from targeted interventions. The recommendations aim to enhance retention strategies and improve overall employee satisfaction.
+This analysis offered valuable insights into factors affecting employee attrition, highlighting areas that could benefit from targeted interventions.
 
 
 
