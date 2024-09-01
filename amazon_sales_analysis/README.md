@@ -12,7 +12,7 @@ You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.git
 ## Overview
 This project involves analyzing Amazon sales data to identify trends, patterns, and key insights that can help improve business performance. The analysis was performed using Python in Google Colab.
 
-## Tools and Technologies Used
+## Tools Used
 - **Python:** For data manipulation and analysis.
 - **Pandas:** For handling and processing data.
 - **Matplotlib/Seaborn:** For data visualization.
