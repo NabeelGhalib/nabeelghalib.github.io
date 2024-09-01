@@ -6,7 +6,7 @@ You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.git
 ## Overview
 This project focuses on analyzing customer data to uncover trends, patterns, and key insights. The primary goal is to segment customers based on various factors using K-means clustering algorithms, which can help businesses improve their strategies and performance.
 
-## Tools and Technologies Used
+## Tools Used
 - **Python:** For data manipulation, analysis, and clustering.
 - **Pandas:** For data handling and preprocessing.
 - **Matplotlib/Seaborn:** For creating insightful visualizations.
