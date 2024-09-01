@@ -13,7 +13,7 @@ To view the project [click here](https://github.com/NabeelGhalib/nabeelghalib.gi
 ## Overview
 This project focuses on analyzing employee attrition data to uncover patterns and trends affecting employee turnover. The analysis was performed using RStudio.
 
-## Tools and Technologies Used
+## Tools Used
 - **RStudio:** For data manipulation, analysis, and visualization.
 - **dplyr:** For data manipulation and cleaning.
 - **ggplot2:** For data visualization.
