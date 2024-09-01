@@ -6,7 +6,7 @@ You can view the project [here](https://github.com/NabeelGhalib/nabeelghalib.git
 ## Overview
 This project involves predicting house prices using various regression techniques, including Linear Regression, Lasso, and Ridge. The aim is to create accurate models that can estimate property prices based on key features, aiding in better decision-making in the real estate market.
 
-## Tools and Technologies Used
+## Tools Used
 - **Python:** For data manipulation, analysis, and modeling.
 - **Pandas:** For handling and preprocessing data.
 - **Matplotlib/Seaborn:** For visualizing data and model performance.
