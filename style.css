@@ -83,7 +83,7 @@ section ul {
 
 section ul li {
     margin-bottom: 15px;
-    color: #666;
+    color: #000; /* Changed to black */
 }
 
 /* Footer */
