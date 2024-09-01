@@ -1,15 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #eaeaea;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #333;
+    background-color: #0044cc;
     color: white;
-    padding: 10px;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -17,21 +20,72 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
+    margin: 0;
+    background-color: #0044cc;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: #333;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #003399;
+    border-radius: 5px;
 }
 
 section {
-    margin: 20px;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
 }
+
+section h2, section h3 {
+    color: #0044cc;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+
