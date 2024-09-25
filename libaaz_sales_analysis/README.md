@@ -1,20 +1,20 @@
-# **Libaaz the Couture - Sales Analysis**
+# **LIBAAZ - The Couture - Sales Analysis**
 # by Nabeel Ghalib
 
 
 ## Objective:
 
-To analyze and provide detailed insights into the sales data for Libaaz the Couture, a bespoke apparel studio specializing in custom-made dresses for women and girls, covering the years 2013-2024.
+To analyze and provide detailed insights into the sales data for LIBAAZ - The Couture, a bespoke apparel studio specializing in custom-made dresses for women and girls, covering the years 2013-2024.
 
 
 ## Key Stakeholders:
 
-Owner and Designer of Libaaz the Couture
+Owner and Designer of LIBAAZ - The Couture.
 
 
 ## Data used:
 
-The data for this analysis was provided to me by the owner.
+The data for this analysis was provided to me by the stakeholder.
 
 
 ## Tools Used:
@@ -29,7 +29,7 @@ The data for this analysis was provided to me by the owner.
 
 ### 1.Data Entry & Cleaning (Excel):
 
-- Received raw sales data from the Libaaz owner, which was handwritten in pencil and pen. Transcribed this data manually into Excel.
+- Received raw sales data from the stakeholder, which was handwritten in pencil and pen. Transcribed this data manually into Excel.
 - Formatted the data by creating a structured table, ensuring data consistency and standardization.
 - Applied **data validation** to automate the entry for fields such as sales channels (e.g., Online, Offline) and referral sources (e.g., Instagram, Facebook), improving accuracy and efficiency.
 - Created unique Customer IDs using the **TEXT and MATCH** functions to ensure no duplicates and a uniform format for identifying each customer.
@@ -184,25 +184,25 @@ END
 - Utilized this calculated field to analyze sales data by age categories, enabling deeper insights into customer demographics.
 - Enabled action filters in Tableau, allowing users to interactively explore the data and dynamically drill down into specific time periods (2013-2017, 2022-2024) to view corresponding metrics.
 
-Dashboard - [Dashboard](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/Dashboard%201%20(2)%20(1).png)
+Tableau Dashboard - [Dashboard](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/Dashboard%201%20(2)%20(2).png)
 
 
 ### 5.Final Report (PowerPoint):
 
 - Consolidated all findings and visualizations into a PowerPoint report.
 - The report included all the answers to the key business questions asked by the owner, along with detailed charts and tables created in Tableau.
-- Presented the report to the owner, ensuring it was actionable and easy to understand.
+- Presented the report to the stakeholder, ensuring it was actionable and easy to understand.
 
-Report - [Libaaz the Couture Report](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/LIBAAZ%20Report.pdf)
+Report - [LIBAAZ - The Couture Report](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/LIBAAZ-Report.pdf)
   
 
 ## Conclusion:
 
 - Delivered detailed insights on sales performance, customer behavior, and product trends across multiple time periods.
-- Provided Libaaz the Couture with actionable recommendations based on data analysis, helping the owner make informed business decisions regarding product offerings, sales channels, and marketing efforts.
+- Provided LIBAAZ - The Couture with actionable recommendations based on data analysis, helping the owner make informed business decisions regarding product offerings, sales channels, and marketing efforts.
 - Demonstrated proficiency in data cleaning, SQL queries, dashboard creation, and presentation skills.
 
 ## Contact Information
-To explore more about the brand and its offerings, you can follow the owner on Instagram: [@LibaazTheCouture](https://www.instagram.com/libaaz_thecouture?igsh=MzkwaGk4NDUwYWp1).
+To explore more about the brand and its offerings, you can follow the owner on Instagram: [libaaz_thecouture](https://www.instagram.com/libaaz_thecouture?igsh=MzkwaGk4NDUwYWp1).
 
 
