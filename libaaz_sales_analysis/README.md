@@ -19,10 +19,10 @@ The data for this analysis was provided to me by the owner.
 
 ## Tools Used:
 
-- Excel: Data entry and cleaning
-- MySQL: Data preparation and analysis
-- Tableau: Data visualization
-- Powerpoint: Reporting
+- **Excel:** Data entry and cleaning
+- **MySQL:** Data preparation and analysis
+- **Tableau:** Data visualization
+- **Powerpoint:** Reporting
 
 
 ## Key Tasks and Approach:
