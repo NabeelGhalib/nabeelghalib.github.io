@@ -1,4 +1,4 @@
-# Libaaz the Couture - Sales Analysis
+# **Libaaz the Couture - Sales Analysis**
 # by Nabeel Ghalib
 
 
