@@ -151,7 +151,7 @@ FROM sales_copy;
 ```
 
 - **Sales Channels:** Broke down sales by online vs. offline channels.
-- **Referral Sources:** Evaluated the most successful marketing platforms such as Instagram and Facebook.
+- **Referral Sources:** Evaluated the most successful marketing platforms such as Instagram, and Facebook.
 - **Time-Based Analysis:** Yearly and monthly sales trends across different periods, identifying peak sales times.
 
 ```sql
@@ -190,7 +190,7 @@ Tableau Dashboard - [Dashboard](https://github.com/NabeelGhalib/nabeelghalib.git
 ### 5.Final Report (PowerPoint):
 
 - Consolidated all findings and visualizations into a PowerPoint report.
-- The report included all the answers to the key business questions asked by the owner, along with detailed charts and tables created in Tableau.
+- The report included all the answers to the key business questions asked by the stakeholder, along with detailed charts and tables created in Tableau.
 - Presented the report to the stakeholder, ensuring it was actionable and easy to understand.
 
 Report - [LIBAAZ - The Couture Report](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/LIBAAZ-Report.pdf)
