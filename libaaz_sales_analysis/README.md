@@ -2,34 +2,30 @@
 # by Nabeel Ghalib
 
 
-## Objective: 
----
+## Objective:
 
 To analyze and provide detailed insights into the sales data for Libaaz the Couture, a bespoke apparel studio specializing in custom-made dresses for women and girls, covering the years 2013-2024.
 
 
 ## Key Stakeholders:
----
 
 Owner and Designer of Libaaz the Couture
 
 
 ## Data used:
----
+
 The data for this analysis was provided to me by the owner.
 
 
 ## Tools Used:
----
 
-- Excel - Data entry and cleaning
-- MySQL - Data preparation and Data Analysis
-- Tableau - Data visualization
-- Powerpoint - Report
+- Excel: Data entry and cleaning
+- MySQL: Data preparation and analysis
+- Tableau: Data visualization
+- Powerpoint: Reporting
 
 
 ## Key Tasks and Approach:
----
 
 ### 1.Data Entry & Cleaning (Excel):
 
@@ -172,22 +168,21 @@ Used SQL queries like ALTER, UPDATE, SET, CASE, WHEN, COUNT, SUM, GROUP BY, ORDE
 ### 4.Visualization & Dashboards (Tableau):
 
 - Imported the processed data from Excel to Tableau and created interactive dashboards to visualize key performance indicators (KPIs), including:
-- Total Sales, Top Products, and Top Customers.
-- Sales by Channel, Referral Source, and Age Group.
-- Yearly and Monthly Sales Trends across different periods.
-- Created Age groups using bins.
+    - Total Sales, Top Products, and Top Customers.
+    - Sales by Channel, Referral Source, and Age Group.
+    - Yearly and Monthly Sales Trends across different periods.
+- Created age groups using **bins** in Tableau to calculate total sales, as the dataset only included individual customer ages.
 - Used filters in Tableau to allow the owner to drill down into specific time periods (2013-2017, 2022-2024).
 
 
-### 5.Final Presentation (PowerPoint):
+### 5.Final Report (PowerPoint):
 
 - Consolidated all findings and visualizations into a PowerPoint report.
 - The report included all the answers to the key business questions asked by the owner, along with detailed charts and tables created in Tableau.
 - Presented the report to the owner, ensuring it was actionable and easy to understand.
   
 
-## Outcome:
----
+## Conclusion:
 
 - Delivered detailed insights on sales performance, customer behavior, and product trends across multiple time periods.
 - Provided Libaaz the Couture with actionable recommendations based on data analysis, helping the owner make informed business decisions regarding product offerings, sales channels, and marketing efforts.
