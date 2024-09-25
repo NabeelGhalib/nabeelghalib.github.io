@@ -1,22 +1,27 @@
 # Libaaz the Couture - Sales Analysis
 # by Nabeel Ghalib
 
-### Objective: 
+## Objective: 
+---
 To analyze and provide detailed insights into the sales data for Libaaz the Couture, a bespoke apparel studio specializing in custom-made dresses for women and girls, covering the years 2013-2024.
 
-### Key Stakeholders:
+## Key Stakeholders:
+---
 Nafia Samar - Owner and Designer of Libaaz the Couture
 
-### Data used:
+## Data used:
+---
 The data for this analysis was provided to me by the owner.
 
-### Tools Used:
+## Tools Used:
+---
 - Excel - Data entry and cleaning
 - MySQL - Data preparation and Data Analysis
 - Tableau - Data visualization
 - Powerpoint - Making report
 
 ## Key Tasks and Approach:
+---
 
 ### 1.Data Entry & Cleaning (Excel):
 
@@ -32,6 +37,7 @@ The data for this analysis was provided to me by the owner.
 
 - Converted the cleaned Excel file to CSV and imported it into MySQL, creating a database and a table for the sales data.
 - Used SQL commands to create and alter tables, ensuring the structure fit the analysis needs.
+
 ```sql
 
 CREATE TABLE sales_copy AS
@@ -161,6 +167,7 @@ Used SQL queries like ALTER, UPDATE, SET, CASE, WHEN, COUNT, SUM, GROUP BY, ORDE
 - Presented the report to the owner, ensuring it was actionable and easy to understand.
 
 ## Outcome:
+---
 - Delivered detailed insights on sales performance, customer behavior, and product trends across multiple time periods.
 - Provided Libaaz the Couture with actionable recommendations based on data analysis, helping the owner make informed business decisions regarding product offerings, sales channels, and marketing efforts.
 - Demonstrated proficiency in data cleaning, SQL queries, dashboard creation, and presentation skills.
