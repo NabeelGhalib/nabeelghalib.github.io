@@ -169,8 +169,20 @@ order by total_sales desc;
     - Total Sales, Top Products, and Top Customers.
     - Sales by Channel, Referral Source, and Age Group.
     - Yearly and Monthly Sales Trends across different periods.
-- Created age groups using **bins** in Tableau to calculate total sales, as the dataset only included individual customer ages.
-- Used filters in Tableau to allow the owner to drill down into specific time periods (2013-2017, 2022-2024).
+- Created a calculated field to segment customer ages into groups for better analysis:
+```
+IF [age] <= 12 THEN "12 and below"
+ELSEIF [age] >= 13 AND [age] <= 19 THEN "13-19"
+ELSEIF [age] >= 20 AND [age] <= 29 THEN "20-29"
+ELSEIF [age] >= 30 AND [age] <= 39 THEN "30-39"
+ELSEIF [age] >= 40 AND [age] <= 49 THEN "40-49"
+ELSEIF [age] >= 50 AND [age] <= 60 THEN "50-60"
+ELSE "Above 60" 
+END
+
+```
+- Utilized this calculated field to analyze sales data by age categories, enabling deeper insights into customer demographics.
+- Enabled action filters in Tableau, allowing users to interactively explore the data and dynamically drill down into specific time periods (2013-2017, 2022-2024) to view corresponding metrics.
 
 Dashboard - [Dashboard](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/Dashboard%201%20(2)%20(1).png)
 
