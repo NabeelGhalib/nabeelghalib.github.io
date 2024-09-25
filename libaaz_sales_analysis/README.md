@@ -172,7 +172,7 @@ order by total_sales desc;
 - Created age groups using **bins** in Tableau to calculate total sales, as the dataset only included individual customer ages.
 - Used filters in Tableau to allow the owner to drill down into specific time periods (2013-2017, 2022-2024).
 
-[Dashboard](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/Dashboard%201%20(2)%20(1).png)
+Dashboard - [Dashboard](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/Dashboard%201%20(2)%20(1).png)
 
 
 ### 5.Final Report (PowerPoint):
@@ -181,7 +181,7 @@ order by total_sales desc;
 - The report included all the answers to the key business questions asked by the owner, along with detailed charts and tables created in Tableau.
 - Presented the report to the owner, ensuring it was actionable and easy to understand.
 
-[Libaaz the Couture Report](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/LIBAAZ%20Report.pdf)
+Report - [Libaaz the Couture Report](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/LIBAAZ%20Report.pdf)
   
 
 ## Conclusion:
