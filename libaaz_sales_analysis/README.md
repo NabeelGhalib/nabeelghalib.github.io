@@ -162,8 +162,6 @@ order by total_sales desc;
 
 ```
 
-Used SQL queries like ALTER, UPDATE, SET, CASE, WHEN, COUNT, SUM, GROUP BY, ORDER BY and more to derive the insights.
-
 
 ### 4.Visualization & Dashboards (Tableau):
 
