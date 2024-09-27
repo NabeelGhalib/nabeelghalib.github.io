@@ -33,6 +33,11 @@ The data for this analysis was provided to me by the stakeholder.
 - Formatted the data by creating a structured table, ensuring data consistency and standardization.
 - Applied **data validation** to automate the entry for fields such as sales channels (e.g., Online, Offline) and referral sources (e.g., Instagram, Facebook), improving accuracy and efficiency.
 - Created unique Customer IDs using the **TEXT and MATCH** functions to ensure no duplicates and a uniform format for identifying each customer.
+```
+
+="cust"&TEXT(MATCH(R2,UNIQUE($R$2:$R$76),0),"000")
+
+```
 - Automated calculations for fields like profit, discounted price, total cost and more, using formulas in Excel.
 - Created a **form** in Excel to streamline data entry, ensuring consistent and accurate input for each sale.
 - Consistently maintained proper formatting across dates, dress types, and other fields to ensure data was easy to analyze.
