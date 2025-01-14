@@ -86,7 +86,7 @@ In this project, I performed a comprehensive Descriptive Analysis of loan data, 
 
 Here are few Key insights:
 
-**1.Loan Applications & Trends:**
+**Loan Applications & Trends:**
 
 **Insight:** The total number of loan applications has steadily increased over time, indicating growing demand for loans.
 **Actionable Insight:** This upward trend suggests that the bank can plan for higher volumes of loan applications, adjusting resources and processing systems accordingly.
@@ -106,7 +106,7 @@ order by month;
 
 ![Loan Applications Trend](loan_applications_trend.png)
 
-**2.Loan Status Distribution:**
+**Loan Status Distribution:**
 
 **Insights**: 
 - The majority of loans (83.3%) have been fully paid, indicating that most borrowers are able to repay their loans successfully.
@@ -134,6 +134,16 @@ GROUP BY loan_status;
 ![Loan Status Distribution](loan_status_distribution.png)
 
 
+**4.Predictive Modeling:**
+
+**Model Selection:**
+- Random Forest and XGBoost models were selected due to their effectiveness in handling tabular data and their ability to provide high accuracy.
+
+**Model Training:** 
+- Both models were trained using the preprocessed data, with hyperparameters tuned to optimize performance.
+
+**Evaluation:** 
+- The models were evaluated using accuracy as the primary metric, and the final XGB model achieved a 97% accuracy rate in predicting loan risks.
 
 
 
