@@ -10,23 +10,15 @@ The specific goals were:
 2. Conduct descriptive analysis to uncover key patterns.
 3. Build and evaluate a predictive model with high accuracy.
 
-
-## Key Stakeholders:
-
-Owner and Designer of LIBAAZ - The Couture.
-
-
 ## Data used:
 
 The data for this project was provided to me by the swapnajeet.
-
 
 ## Tools Used:
 
 - **Jira**: Project management
 - **MySQL:** Data preparation and Descriptive analysis
 - **Jupyter Notebook:** Predictive Analysis (Model building, Evaluating and Tuning)
-
 
 ## Key Tasks and Approach:
 
