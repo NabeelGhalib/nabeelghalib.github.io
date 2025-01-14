@@ -91,8 +91,13 @@ Here are few Key insights:
 ![Loan Applications Trend](loan_applications_trend.png)
 
 
-**Insight:** The total number of loan applications has steadily increased over time, indicating growing demand for loans.
-**Actionable Insight:** This upward trend suggests that the bank can plan for higher volumes of loan applications, adjusting resources and processing systems accordingly.
+
+**Insight:** 
+- The total number of loan applications has steadily increased over time, indicating growing demand for loans.
+
+**Actionable Insight:** 
+- This upward trend suggests that the bank can plan for higher volumes of loan applications, adjusting resources and processing systems accordingly.
+
 
 ```sql
 
@@ -110,6 +115,7 @@ order by month;
 
 
 **Loan Status Distribution:**
+
 
 ![Loan Status Distribution](loan_status_distribution.png)
 
