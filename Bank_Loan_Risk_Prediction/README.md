@@ -67,7 +67,7 @@ where emp_title is null;
 ```
 - Converted the null to unknown instead leaving it as null because it was appropriate for the upcoming model building.
 
-- Converting text values in date
+- Converting text values in date columns.
 
 ```sql
 
