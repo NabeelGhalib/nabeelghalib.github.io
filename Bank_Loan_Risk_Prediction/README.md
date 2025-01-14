@@ -93,7 +93,9 @@ Here are few Key insights:
 
 ```sql
 
-select month(issue_date) as month, count(id) as total_applications
+select month(issue_date) as month_no,
+monthname(issue_date) as month,
+count(id) as total_applications
 from loan_data
 group by month
 order by month;
