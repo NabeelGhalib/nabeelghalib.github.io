@@ -164,6 +164,11 @@ GROUP BY loan_status;
 **Evaluation:** 
 - The models were evaluated using accuracy as the primary metric, and the final XGB model achieved a 97% accuracy score in predicting loan risks.
 
+## 5. Conclusion:**
+This project successfully applied machine learning techniques to predict the risk of loan defaults, achieving an accuracy of 97%. The findings suggest that Random Forest and XGBoost are effective models for this type of prediction. Future work could focus on enhancing the model with more data and exploring other advanced algorithms to further improve the accuracy.
+
+
+
 
 
 
