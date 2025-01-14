@@ -80,7 +80,7 @@ MODIFY issue_date DATE;
 
 ```
 
-### 3.Descriptive Analysis (MySQL):
+### 3. Descriptive Analysis (MySQL):
 
 In this project, I performed a comprehensive Descriptive Analysis of loan data, aiming to extract meaningful insights to support decision-making and performance tracking in the loan business. The analysis covers key performance indicators (KPIs) such as loan applications, funded amounts, received payments, and loan status.
 
@@ -134,7 +134,11 @@ GROUP BY loan_status;
 ![Loan Status Distribution](loan_status_distribution.png)
 
 
-**4.Predictive Modeling:**
+**4. Predictive Modeling:**
+
+**Data Preprocessing:**
+- Converted the categorical variables into numerics by one hot encoding, label encoding.
+- Since using Random Forest and XGB, normalizing numerical variables is not neccessary.
 
 **Model Selection:**
 - Random Forest and XGBoost models were selected due to their effectiveness in handling tabular data and their ability to provide high accuracy.
@@ -142,8 +146,11 @@ GROUP BY loan_status;
 **Model Training:** 
 - Both models were trained using the preprocessed data, with hyperparameters tuned to optimize performance.
 
+**Feauture Selection:**
+- Selected important features using the important feature plot of XGB to select the most important features.
+
 **Evaluation:** 
-- The models were evaluated using accuracy as the primary metric, and the final XGB model achieved a 97% accuracy score in predicting loan risks.
+- The models were evaluated using accuracy as the primary metric, and the final XGB model with selected features achieved a 97% accuracy score in predicting loan risks.
 
 
 
