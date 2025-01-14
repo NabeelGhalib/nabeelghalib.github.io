@@ -99,6 +99,8 @@ group by month
 order by month;
 
 ```
+
+![Loan Applications Trend](loan_app_trend.png)
 ![Loan Applications Trend](loan_applications_trend.png)
 
 **2.Loan Status Distribution:**
