@@ -162,7 +162,7 @@ GROUP BY loan_status;
 - Selected important features using the important feature plot of XGB to select the most important features.
 
 **Evaluation:** 
-- The models were evaluated using accuracy as the primary metric, and the final XGB model with selected features achieved a 97% accuracy score in predicting loan risks.
+- The models were evaluated using accuracy as the primary metric, and the final XGB model achieved a 97% accuracy score in predicting loan risks.
 
 
 
