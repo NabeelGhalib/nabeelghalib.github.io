@@ -207,7 +207,7 @@ Report - [LIBAAZ - The Couture Report](https://github.com/NabeelGhalib/nabeelgha
 - Provided LIBAAZ - The Couture with actionable recommendations based on data analysis, helping the owner make informed business decisions regarding product offerings, sales channels, and marketing efforts.
 - Demonstrated proficiency in data cleaning, SQL queries, dashboard creation, and presentation skills.
 
-## Contact Information
+## Stakeholder Contact Information:
 To explore more about the brand and its offerings, you can follow the owner on Instagram: [libaaz_thecouture](https://www.instagram.com/libaaz_thecouture?igsh=MzkwaGk4NDUwYWp1).
 
 
