@@ -88,6 +88,9 @@ Here are few Key insights:
 
 **Loan Applications & Trends:**
 
+![Loan Applications Trend](loan_applications_trend.png)
+
+
 **Insight:** The total number of loan applications has steadily increased over time, indicating growing demand for loans.
 **Actionable Insight:** This upward trend suggests that the bank can plan for higher volumes of loan applications, adjusting resources and processing systems accordingly.
 
@@ -104,9 +107,12 @@ order by month;
 
 ![Loan Applications Trend](loan_app_trend.png)
 
-![Loan Applications Trend](loan_applications_trend.png)
+
 
 **Loan Status Distribution:**
+
+![Loan Status Distribution](loan_status_distribution.png)
+
 
 **Insights**: 
 - The majority of loans (83.3%) have been fully paid, indicating that most borrowers are able to repay their loans successfully.
@@ -131,7 +137,7 @@ GROUP BY loan_status;
 
 ![Loan Status Distribution](loan_dist_sql.png)
 
-![Loan Status Distribution](loan_status_distribution.png)
+
 
 
 **4. Predictive Modeling:**
