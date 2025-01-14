@@ -143,7 +143,7 @@ GROUP BY loan_status;
 - Both models were trained using the preprocessed data, with hyperparameters tuned to optimize performance.
 
 **Evaluation:** 
-- The models were evaluated using accuracy as the primary metric, and the final XGB model achieved a 97% accuracy rate in predicting loan risks.
+- The models were evaluated using accuracy as the primary metric, and the final XGB model achieved a 97% accuracy score in predicting loan risks.
 
 
 
