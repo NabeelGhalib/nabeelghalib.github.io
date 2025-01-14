@@ -123,7 +123,9 @@ FROM loan_data
 GROUP BY loan_status;
 
 ```
+
 ![Loan Status Distribution](loan_dist_sql.png)
+
 ![Loan Status Distribution](loan_status_distribution.png)
 
 
