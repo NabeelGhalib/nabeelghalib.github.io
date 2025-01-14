@@ -109,6 +109,23 @@ order by month;
 ```
 ![Loan Applications Trend](loan_applications_trend.png)
 
+Loan Status Distribution:
+
+
+``` sql
+
+SELECT 
+    loan_status,
+    COUNT(id) AS total_applications,
+    (COUNT(id) * 100.0 / (SELECT COUNT(id) FROM loan_data)) AS percentage
+FROM loan_data
+GROUP BY loan_status;
+
+```
+![Loan Status Distribution](loan_status_distribution.png)
+
+
+
 
 
 
