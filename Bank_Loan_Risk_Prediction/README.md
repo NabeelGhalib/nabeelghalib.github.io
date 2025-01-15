@@ -24,15 +24,20 @@ The data for this project was provided to me by the swapnajeet.
 
 ### 1. Project Planning (Kanban Methodology):
 
-Kanban workflow: Managed tasks using a Kanban board to track progress across phases:
-- To Do: Data cleaning, analysis, feature engineering, and model building.
-- In Progress: Current tasks prioritized by deadlines.
-- Done: Completed milestones for project monitoring.
+![Jira Dashboard](jira.png)
+
+**Kanban workflow:** Managed tasks using a Kanban board to track progress across phases:
+
+- **To Do:** Data cleaning, analysis, feature engineering, and model building.
+- **In Progress:** Current tasks prioritized by deadlines.
+- **Done:** Completed milestones for project monitoring.
+
 Set deadlines for each phase to ensure smooth execution and timely delivery.
 
 ### 2. Data Cleaning & Transformation (MySQL):
 
-Identified and Handled Missing Values:
+**Identified and Handled Missing Values:**
+
 - The emp_title column had empty spaces (not NULL values) and whitespace characters.
 - Used the TRIM function to remove unnecessary whitespace from the emp_title values.
 - Converted empty strings and spaces into NULL values to ensure consistency.
@@ -67,7 +72,7 @@ where emp_title is null;
 ```
 - Converted the null to unknown instead leaving it as null because it was appropriate for the upcoming model building.
 
-- Converting text values in date columns.
+- Converting text values into date in date columns.
 
 ```sql
 
