@@ -152,7 +152,19 @@ GROUP BY loan_status;
 
 **Insights:**
 
-**Actionable Insights:**
+**Top 5 Loan Categories:**
+
+- **Debt Consolidation (232.5M):** The largest category, reflecting efforts to consolidate debt for simpler repayment terms or lower interest rates.
+- **Credit Card (58.9M):** A significant portion of loans is directed towards credit card debt, indicating people are managing high-interest balances.
+- **Home Improvement (33.4M):** Strong investment in home renovations, likely driven by rising home values or market trends.
+- **Other (31.2M):** Miscellaneous loans for unspecified purposes, representing a range of financial needs.
+- **Small Business (24.1M):** Loans for small businesses, likely indicating growth or support during recovery from economic challenges.
+
+**Bottom 3 Loan Categories:**
+
+- **Renewable Energy (0.8M):** Low investment, suggesting potential for growth in renewable energy loans given the global push for sustainability.
+- **Vacation (2.0M):** Low demand for vacation loans, likely due to travel restrictions or reduced discretionary spending.
+- **Educational (2.2M):** Limited amount for educational loans, possibly due to alternative funding options or rising education costs discouraging borrowing.
 
 
 
