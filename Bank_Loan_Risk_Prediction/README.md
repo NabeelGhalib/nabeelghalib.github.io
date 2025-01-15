@@ -221,7 +221,7 @@ The XGBoost model was evaluated using accuracy, precision, recall, F1-score, the
 
 **AUC-ROC Score:**
 
-- The AUC-ROC score for predicting charged-off loans (Class 0) is 0.9760, indicating excellent model performance with a high true positive rate and low false positive rate for classifying charged-off loans.
+- The AUC-ROC score for predicting charged-off loans (Class 0) is **0.9760**, indicating excellent model performance with a high true positive rate and low false positive rate for classifying charged-off loans.
 
 **ROC Curve Analysis:**
 
