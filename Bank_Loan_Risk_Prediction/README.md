@@ -88,17 +88,6 @@ Here are few Key insights:
 
 **Loan Applications & Trends:**
 
-![Loan Applications Trend](loan_applications_trend.png)
-
-
-
-**Insight:** 
-- The total number of loan applications has steadily increased over time, indicating growing demand for loans.
-
-**Actionable Insight:** 
-- This upward trend suggests that the bank can plan for higher volumes of loan applications, adjusting resources and processing systems accordingly.
-
-
 ```sql
 
 select month(issue_date) as month_no,
@@ -113,22 +102,21 @@ order by month;
 ![Loan Applications Trend](loan_app_trend.png)
 
 
+![Loan Applications Trend](loan_applications_trend.png)
+
+
+
+**Insight:** 
+- The total number of loan applications has steadily increased over time, indicating growing demand for loans.
+
+**Actionable Insight:** 
+- This upward trend suggests that the bank can plan for higher volumes of loan applications, adjusting resources and processing systems accordingly.
+
+
+
+
 
 **Loan Status Distribution:**
-
-
-![Loan Status Distribution](loan_status_distribution.png)
-
-
-**Insights:** 
-- The majority of loans (83.3%) have been fully paid, indicating that most borrowers are able to repay their loans successfully.
-- A relatively smaller portion (13.8%) of loans has been charged off, indicating some level of loan defaults.
-- Only 2.8% of loans are currently active and unpaid, suggesting effective loan management.
-
-**Actionable Insights:**
-- This high repayment rate suggests that the bank can continue offering loans with confidence. However, it may consider implementing targeted marketing strategies to further incentivize borrowers and maintain this trend.
-- The bank should focus on enhancing its risk management strategies, such as improving credit assessments and collection processes, to reduce charge-offs and mitigate potential losses.
-- The bank could maintain its current operational processes and focus on maintaining low levels of unpaid loans, while exploring ways to further streamline collections or recovery on these loans.
 
 ``` sql
 
@@ -145,7 +133,24 @@ GROUP BY loan_status;
 ![Loan Status Distribution](loan_dist_sql.png)
 
 
+![Loan Status Distribution](loan_status_distribution.png)
+
+
+**Insights:** 
+- The majority of loans (83.3%) have been fully paid, indicating that most borrowers are able to repay their loans successfully.
+- A relatively smaller portion (13.8%) of loans has been charged off, indicating some level of loan defaults.
+- Only 2.8% of loans are currently active and unpaid, suggesting effective loan management.
+
+**Actionable Insights:**
+- This high repayment rate suggests that the bank can continue offering loans with confidence. However, it may consider implementing targeted marketing strategies to further incentivize borrowers and maintain this trend.
+- The bank should focus on enhancing its risk management strategies, such as improving credit assessments and collection processes, to reduce charge-offs and mitigate potential losses.
+- The bank could maintain its current operational processes and focus on maintaining low levels of unpaid loans, while exploring ways to further streamline collections or recovery on these loans.
+
+
+
+
 **Loan Amount Funded by Purpose:**
+
 
 ![Loan Amount Funded by Purpose](loan_amt_purpose.png)
 
