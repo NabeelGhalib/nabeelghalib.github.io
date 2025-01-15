@@ -177,21 +177,57 @@ GROUP BY loan_status;
 **4. Predictive Modeling:**
 
 **Data Preprocessing:**
+
+- Null values were already handled in MySQL, and there were no other errors, format inconsistencies, or dirty data.
+- Identified Outliers and them left as they were because these models are robust to them.
 - Converted the categorical variables into numerics by one hot encoding, label encoding.
-- Since using Random Forest and XGB, normalizing numerical variables was not neccessary.
+- Since Random Forest and XGBoost models are not sensitive to feature scaling, normalizing numerical variables was not necessary.
 
 **Model Selection:**
+
 - Random Forest and XGBoost models were selected due to their effectiveness in handling tabular data and their ability to provide high accuracy.
 
 **Model Training:** 
+
 - Both models were trained using the preprocessed data, with hyperparameters tuned to optimize performance.
 
 **Feauture Selection:**
+
 - Selected important features using the important feature plot of XGB.
 
 **Evaluation:** 
-- The models were evaluated using accuracy as the primary metric, and the final XGB model achieved a 97% accuracy score in predicting loan risks.
 
+The XGBoost model was evaluated using accuracy, precision, recall, F1-score, the confusion matrix, and AUC-ROC score.
+
+**Confusion Matrix:**
+
+- **True Positives (TP):** 6359 (Correctly predicted fully paid loans)
+- **False Positives (FP):** 144 (Charged-off loans incorrectly predicted as fully paid)
+- **True Negatives (TN):** 952 (Correctly predicted charged-off loans)
+- **False Negatives (FN):** 41 (Fully paid loans incorrectly predicted as charged-off)
+
+- The confusion matrix shows a low number of false negatives (41) and false positives (144), indicating good performance in distinguishing between fully paid and charged-off loans.
+
+**Classification Report:**
+
+**Precision for Fully Paid Loans (Class 1):** 0.98 – The model's accuracy in predicting fully paid loans.
+**Recall for Fully Paid Loans (Class 1):** 0.99 – The model successfully identifies most fully paid loans.
+**Precision for Charged-Off Loans (Class 0):** 0.96 – The model's accuracy in predicting charged-off loans.
+**Recall for Charged-Off Loans (Class 0):** 0.87 – The model identifies a high percentage of charged-off loans.
+**F1-score for Fully Paid Loans (Class 1):** 0.99 – The model's balance between precision and recall for fully paid loans.
+**F1-score for Charged-Off Loans (Class 0):** 0.91 – The model's balance between precision and recall for charged-off loans.
+
+- The overall macro average F1-score is 0.95, and the weighted average F1-score is 0.97, demonstrating strong performance across both classes.
+
+**AUC-ROC Score:**
+
+- The AUC-ROC score for predicting charged-off loans (Class 0) is 0.9760, indicating excellent model performance with a high true positive rate and low false positive rate for classifying charged-off loans.
+
+**Overall Performance:**
+
+- The final XGBoost model achieved a 97.53% accuracy score, demonstrating its effectiveness in predicting loan risk.
+- The AUC-ROC score, along with the precision, recall, and F1-scores, shows the model’s robustness in distinguishing between fully paid and charged-off loans.
+ 
 
 
 ## 5. Conclusion:
