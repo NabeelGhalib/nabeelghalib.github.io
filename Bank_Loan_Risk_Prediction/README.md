@@ -223,6 +223,15 @@ The XGBoost model was evaluated using accuracy, precision, recall, F1-score, the
 
 - The AUC-ROC score for predicting charged-off loans (Class 0) is 0.9760, indicating excellent model performance with a high true positive rate and low false positive rate for classifying charged-off loans.
 
+**ROC Curve Analysis:**
+
+To further assess the model’s performance, I plotted the ROC Curve for both Fully Paid loans (Class 1) and Charged-Off loans (Class 0). The ROC curve shows the model's ability to distinguish between these two classes across different thresholds.
+
+![ROC Curve](roc_curve.png)
+
+Fully Paid Loans (Class 1): The ROC curve for Class 1 shows a high true positive rate, indicating that the model is excellent at identifying fully paid loans.
+Charged-Off Loans (Class 0): The ROC curve for Class 0 demonstrates a similarly high true positive rate and low false positive rate, confirming the model's effectiveness at identifying charged-off loans.
+
 **Overall Performance:**
 
 - The final XGBoost model achieved a 97.53% accuracy score, demonstrating its effectiveness in predicting loan risk.
@@ -232,7 +241,7 @@ The XGBoost model was evaluated using accuracy, precision, recall, F1-score, the
 
 ## 5. Conclusion:
 
-In this project, we aimed to predict loan defaults and assess the effectiveness of predictive models in distinguishing between fully paid loans and charged-off loans. The XGBoost model demonstrated remarkable performance with an accuracy of 97.53% and an AUC-ROC score of 0.9760, which indicates the model’s ability to distinguish between the two classes with high confidence.
+In this project, I aimed to predict loan defaults and assess the effectiveness of predictive models in distinguishing between fully paid loans and charged-off loans. The XGBoost model demonstrated remarkable performance with an accuracy of 97.53% and an AUC-ROC score of 0.9760, which indicates the model’s ability to distinguish between the two classes with high confidence.
 
 **Key insights from the evaluation include:**
 
