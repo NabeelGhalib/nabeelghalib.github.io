@@ -99,6 +99,107 @@ footer {
     text-transform: uppercase;
 }
 
+/* Base Styles */
+body {
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #f8f8f8;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+    background-color: #444;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 25px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #ddd;
+}
+
+/* Section Styles */
+section {
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+section h2, section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* List Styles */
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 15px;
+    color: #000; /* Changed to black */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #f8f8f8;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 /* ---- Project Hover and Drop Down Details ---- */
 
 /* Project item styles */
@@ -110,16 +211,15 @@ footer {
 /* Hide project details initially */
 .project-details {
     opacity: 0; /* Makes it invisible */
-    height: 0; /* Set height to 0 initially */
-    overflow: hidden; /* Hides content without affecting layout */
-    transition: opacity 0.3s ease, height 0.3s ease; /* Smooth transition for opacity and height */
+    display: none; /* Hides the element without affecting layout */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
     margin-top: 10px; /* Adds space below project name */
 }
 
 /* Show project details on hover */
 .project-item:hover .project-details {
     opacity: 1; /* Makes the details fully visible */
-    height: auto; /* Restores height when visible */
+    display: block; /* Shows the project details */
 }
 
 /* Styling for the project name */
@@ -135,6 +235,30 @@ footer {
 .project-item:hover a {
     color: #0056b3;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px;
+        margin: 20px auto;
+    }
+
+    header {
+        font-size: 1.5em;
+    }
+}
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
