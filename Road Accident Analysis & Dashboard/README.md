@@ -51,7 +51,7 @@ To ensure accurate analysis, the dataset underwent cleaning and transformation:
 
 ## Interactive Dashboard & Navigation
 
-[!Dashboard](Dashboard.png)
+![Dashboard](Dashboard.png)
 
 - Pivot Tables & Charts summarize key findings dynamically.
 - Interactivity Features
