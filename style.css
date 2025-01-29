@@ -102,25 +102,24 @@ footer {
 
 /* Project item styles */
 .project-item {
-    position: relative; /* Ensures the project details are positioned relative to the project name */
-    margin-bottom: 0; /* No extra space between project items */
+    position: relative; /* Allows absolute positioning of details */
+    margin-bottom: 10px; /* Adjust spacing between items */
 }
 
 /* Hide project details initially */
 .project-details {
-    opacity: 0; /* Makes the details invisible */
-    visibility: hidden; /* Keeps it hidden without affecting layout */
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition for opacity */
-    margin-top: 0; /* No margin at the top initially */
-    padding: 0; /* Remove any padding */
+    display: none; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    margin-top: 10px; /* Add space between the name and details */
 }
 
 /* Show project details on hover */
 .project-item:hover .project-details {
+    display: block; /* Show the details */
     opacity: 1; /* Make the details visible */
-    visibility: visible; /* Make the details visible */
-    margin-top: 10px; /* Adds a small gap below the project name */
-    transition: opacity 0.3s ease, visibility 0s; /* Smooth transition for opacity */
+    visibility: visible; /* Ensure visibility */
+    transition: opacity 0.3s ease, visibility 0s; /* Smooth transition */
 }
 
 /* Styling for the project name */
@@ -138,11 +137,15 @@ footer {
     color: #0056b3;
 }
 
-/* Add the drop-down effect */
-.project-item:hover .project-details {
-    display: block; /* Make sure the details are shown */
+/* Add styling for project details */
+.project-details ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
+.project-details ul li {
+    margin-bottom: 8px;
+}
 
 
 /* Responsive Design */
