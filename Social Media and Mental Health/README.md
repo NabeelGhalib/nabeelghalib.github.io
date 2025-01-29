@@ -260,8 +260,7 @@ Trained a Logistic Regression model with 50-fold Cross-Validation and evaluated 
 
 ## Results & Insights
 
-- **Social media usage significantly impacts mental health**.  
-  Time spent on social media is a strong predictor of mental health risk.
+- **Social media usage significantly impacts mental health**, Time spent on social media is a strong predictor of mental health risk.
 
 - **Logistic Regression achieved 98.5% accuracy**, demonstrating the model’s ability to predict whether a user may need a mental health check-up based on their social media usage.
 
