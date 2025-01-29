@@ -102,25 +102,24 @@ footer {
 
 /* Project item styles */
 .project-item {
-    position: relative; /* Allows absolute positioning of details */
+    position: relative;
     margin-bottom: 10px; /* Adjust spacing between items */
 }
 
 /* Hide project details initially */
 .project-details {
-    display: none; /* Initially hidden */
-    opacity: 0; /* Invisible */
-    max-height: 0; /* Prevent space from being occupied */
-    overflow: hidden; /* Prevent text from overflowing when hidden */
-    transition: opacity 0.3s ease, max-height 0.5s ease, margin-top 0.3s ease; /* Smooth transition */
+    height: 0; /* Initially no height */
+    opacity: 0; /* Make it invisible */
+    overflow: hidden; /* Prevent text from overflowing */
+    transition: height 0.3s ease, opacity 0.3s ease; /* Smooth transition for height and opacity */
+    margin-top: 0; /* No extra space initially */
 }
 
 /* Show project details on hover */
 .project-item:hover .project-details {
-    display: block; /* Show the details */
+    height: auto; /* Allow the height to expand to fit the content */
     opacity: 1; /* Make the details visible */
-    max-height: 500px; /* Allow enough space for the content to drop down */
-    margin-top: 10px; /* Add space between the name and details */
+    margin-top: 10px; /* Adds a small space below the project name */
 }
 
 /* Styling for the project name */
@@ -147,7 +146,6 @@ footer {
 .project-details ul li {
     margin-bottom: 8px;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
