@@ -99,125 +99,27 @@ footer {
     text-transform: uppercase;
 }
 
-/* Base Styles */
-body {
-    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #444;
-    line-height: 1.7;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    color: #f8f8f8;
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 20px 0;
-    background-color: #444;
-    border-radius: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #f8f8f8;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 15px 25px;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    color: #ddd;
-}
-
-/* Section Styles */
-section {
-    margin: 40px auto;
-    padding: 40px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    max-width: 900px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-section h2, section h3 {
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-}
-
-/* List Styles */
-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-section ul li {
-    margin-bottom: 15px;
-    color: #000; /* Changed to black */
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #f8f8f8;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 50px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
 
 /* Project item styles */
 .project-item {
-    position: relative; /* Ensure the project details are positioned relative to this item */
-    margin-bottom: 10px; /* Space between projects */
+    position: relative; /* Ensures the project details are positioned relative to the project name */
+    margin-bottom: 0; /* No extra space between project items */
 }
 
 /* Hide project details initially */
 .project-details {
-    opacity: 0; /* Makes it invisible */
-    visibility: hidden; /* Hides the element without affecting layout */
+    opacity: 0; /* Makes the details invisible */
+    visibility: hidden; /* Keeps it hidden without affecting layout */
     transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition for opacity */
-    margin-top: 10px; /* Adds space below project name */
+    margin-top: 0; /* No margin at the top initially */
+    padding: 0; /* Remove any padding */
 }
 
 /* Show project details on hover */
 .project-item:hover .project-details {
-    opacity: 1; /* Makes the details fully visible */
-    visibility: visible; /* Shows the project details */
+    opacity: 1; /* Make the details visible */
+    visibility: visible; /* Make the details visible */
+    margin-top: 10px; /* Adds a small gap below the project name */
     transition: opacity 0.3s ease, visibility 0s; /* Smooth transition for opacity */
 }
 
@@ -228,6 +130,7 @@ footer {
     font-weight: bold;
     color: #333;
     text-decoration: none;
+    margin-bottom: 0; /* Remove any bottom margin from project name */
 }
 
 /* Hover effect for project name */
@@ -235,6 +138,10 @@ footer {
     color: #0056b3;
 }
 
+/* Add the drop-down effect */
+.project-item:hover .project-details {
+    display: block; /* Make sure the details are shown */
+}
 
 
 
