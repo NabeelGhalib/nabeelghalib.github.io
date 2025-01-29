@@ -99,27 +99,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        background-color: #333;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 30px;
-        margin: 20px auto;
-    }
-
-    header {
-        font-size: 1.5em;
-    }
-}
-
 /* ---- Project Hover and Drop Down Details ---- */
 
 /* Project item styles */
@@ -155,3 +134,26 @@ footer {
 .project-item:hover a {
     color: #0056b3;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px;
+        margin: 20px auto;
+    }
+
+    header {
+        font-size: 1.5em;
+    }
+}
+
+
