@@ -1,4 +1,4 @@
-# Road Accident Analysis Dashboard
+# Road Accident Analysis & Dashboard
 
 ## Overview
 This project analyzes road accident casualties using Excel, leveraging Pivot Tables, Pivot Charts, and an Interactive Dashboard. The goal is to identify key trends based on severity, road conditions, vehicle types, and other contributing factors to improve road safety.
