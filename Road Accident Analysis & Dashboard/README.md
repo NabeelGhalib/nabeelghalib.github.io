@@ -50,9 +50,17 @@ To ensure accurate analysis, the dataset underwent cleaning and transformation:
 - Encourage Public Transport Use: Reducing private vehicle dependency in urban areas can ease congestion and lower accident rates.
 
 ## Interactive Dashboard & Navigation
+
+[Dashboard](Dashboard.png)
+
 - Pivot Tables & Charts summarize key findings dynamically.
-- Navigation Buttons allow easy movement between the Dashboard and Data Analysis Sheet.
-- Click on the Dashboard Icon to explore the visual insights.
+- Interactivity Features
+The dashboard includes a Filter Panel that allows users to dynamically filter data based on:
+ - Year, Month, and Day
+ - Urban and Rural Locations
+- This enables users to explore trends and insights more efficiently by selecting specific filters.
+- Added Dashboard and Data Analysis sheet icons and linked them to respective sheets.Navigation Buttons allow easy movement between the Dashboard and Data Analysis Sheet.
+  
 
 
 ## Conclusion
