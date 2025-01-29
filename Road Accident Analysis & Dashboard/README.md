@@ -54,8 +54,7 @@ To ensure accurate analysis, the dataset underwent cleaning and transformation:
 ![Dashboard](Dashboard.png)
 
 - Pivot Tables & Charts summarize key findings dynamically.
-- Interactivity Features
-The dashboard includes a Filter Panel that allows users to dynamically filter data based on:
+- The dashboard includes a Filter Panel that allows users to dynamically filter data based on:
   - Year, Month, and Day
   - Urban and Rural Locations
 - This enables users to explore trends and insights more efficiently by selecting specific filters.
