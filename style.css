@@ -200,8 +200,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* ---- Project Hover and Drop Down Details ---- */
-
 /* Project item styles */
 .project-item {
     position: relative; /* Ensure the project details are positioned relative to this item */
@@ -211,15 +209,16 @@ footer {
 /* Hide project details initially */
 .project-details {
     opacity: 0; /* Makes it invisible */
-    display: none; /* Hides the element without affecting layout */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    visibility: hidden; /* Hides the element without affecting layout */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition for opacity */
     margin-top: 10px; /* Adds space below project name */
 }
 
 /* Show project details on hover */
 .project-item:hover .project-details {
     opacity: 1; /* Makes the details fully visible */
-    display: block; /* Shows the project details */
+    visibility: visible; /* Shows the project details */
+    transition: opacity 0.3s ease, visibility 0s; /* Smooth transition for opacity */
 }
 
 /* Styling for the project name */
@@ -234,27 +233,6 @@ footer {
 /* Hover effect for project name */
 .project-item:hover a {
     color: #0056b3;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        background-color: #333;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 30px;
-        margin: 20px auto;
-    }
-
-    header {
-        font-size: 1.5em;
-    }
 }
 
 
