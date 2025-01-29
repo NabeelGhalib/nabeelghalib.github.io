@@ -24,10 +24,12 @@ To ensure accurate analysis, the dataset underwent cleaning and transformation:
 ### Casualties by Vehicle Type
 - Cars have the highest accident involvement, followed by bikes and vans.
 - Agricultural vehicles contribute the least to accident numbers.
-Monthly Trends (2021 & 2022)
+
+### Monthly Trends (2021 & 2022)
 - Accidents peak in winter months (December – February), likely due to adverse weather conditions.
 - Lower casualty rates in summer (June – August) suggest better road conditions and visibility.
-Road Type & Surface Conditions
+
+### Road Type & Surface Conditions
 - Dual carriageways have the highest accident numbers, followed by single carriageways.
 - Slip roads and one-way streets report the lowest casualty figures.
 - Dry roads see the most accidents, while ice/snow conditions have the least.
