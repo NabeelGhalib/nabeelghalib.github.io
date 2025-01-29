@@ -109,16 +109,17 @@ footer {
 
 /* Hide project details initially */
 .project-details {
-    visibility: hidden; /* Keeps it out of the layout */
     opacity: 0; /* Makes it invisible */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    height: 0; /* Set height to 0 initially */
+    overflow: hidden; /* Hides content without affecting layout */
+    transition: opacity 0.3s ease, height 0.3s ease; /* Smooth transition for opacity and height */
     margin-top: 10px; /* Adds space below project name */
 }
 
 /* Show project details on hover */
 .project-item:hover .project-details {
-    visibility: visible; /* Makes the details visible */
     opacity: 1; /* Makes the details fully visible */
+    height: auto; /* Restores height when visible */
 }
 
 /* Styling for the project name */
