@@ -189,7 +189,8 @@ Conducted a correlation analysis to explore relationships between variables such
         print("Fail to reject the null hypothesis: Time spent on social media does not affect mental health scores.")
     ```
 
-**Result**: p-value: 2.9612663424811784e-25
+**Result**: p-value: 2.9612663424811784e-25. 
+
 The null hypothesis was rejected, confirming that social media time has a significant effect on mental health.
 
 ---
