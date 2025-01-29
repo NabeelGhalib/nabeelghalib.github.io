@@ -109,17 +109,18 @@ footer {
 /* Hide project details initially */
 .project-details {
     display: none; /* Initially hidden */
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
-    margin-top: 10px; /* Add space between the name and details */
+    opacity: 0; /* Invisible */
+    max-height: 0; /* Prevent space from being occupied */
+    overflow: hidden; /* Prevent text from overflowing when hidden */
+    transition: opacity 0.3s ease, max-height 0.5s ease, margin-top 0.3s ease; /* Smooth transition */
 }
 
 /* Show project details on hover */
 .project-item:hover .project-details {
     display: block; /* Show the details */
     opacity: 1; /* Make the details visible */
-    visibility: visible; /* Ensure visibility */
-    transition: opacity 0.3s ease, visibility 0s; /* Smooth transition */
+    max-height: 500px; /* Allow enough space for the content to drop down */
+    margin-top: 10px; /* Add space between the name and details */
 }
 
 /* Styling for the project name */
