@@ -1,4 +1,4 @@
-# Supply Chain Analysis
+# Supply Chain Analysis and Dashboard
 
 ## Overview
 This project analyzes supply chain data to identify inefficiencies, optimize inventory management, and improve operational performance. The analysis was conducted using MySQL for data processing and exploratory analysis, followed by Power BI for data transformation, visualization, and insight generation.
