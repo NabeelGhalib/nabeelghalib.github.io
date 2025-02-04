@@ -13,7 +13,7 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 
 ### Sales & Demand Trends
 
-![Dashboard](Screenshot_(158).png)
+![Dashboard](Screenshot_158.png)
 - Total Revenue: $578K with 46,099 products sold.
 
 **Top-Selling Product Types:**
@@ -25,7 +25,7 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 
 ### Inventory & Stock Management
 
-![Dashboard](Screenshot_(159).png)
+![Dashboard](Screenshot_159.png)
 
 - Total Stock Level: 4,777 units.
 - Stock Distribution: Kolkata (30.12%) holds the most inventory, followed by Mumbai and Bangalore.
@@ -33,7 +33,7 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 
 ### Supplier Performance
 
-![Dashboard](Screenshot_(160).png)
+![Dashboard](Screenshot_160.png)
 
 - Top Supplier by Profit Margin: Supplier 3 (91%), followed by Supplier 2 (87%) and Supplier 5 (85%).
 - High-Cost Suppliers: Supplier 2 and Supplier 4 have higher procurement costs.
@@ -44,7 +44,7 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 
 ### Manufacturing Efficiency & Quality Control
 
-![Dashboard](Screenshot_(161).png)
+![Dashboard](Screenshot_161.png)
 
 - Average Manufacturing Lead Time: 14.77 days.
 - Inspection Delays: 44.6% of products are still pending inspection, increasing supply chain bottlenecks.
@@ -52,7 +52,7 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 
 ### Logistics & Shipping Performance
 
-![Dashboard](Screenshot_(162).png)
+![Dashboard](Screenshot_162.png)
 
 **Total Shipping Cost Distribution:**
 - Carrier B (42.7%) incurs the highest shipping cost.
