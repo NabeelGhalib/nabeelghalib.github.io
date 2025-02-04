@@ -13,6 +13,7 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 
 ### Sales & Demand Trends
 
+![Dashboard](Screenshot (158).png)
 - Total Revenue: $578K with 46,099 products sold.
 
 **Top-Selling Product Types:**
@@ -21,12 +22,19 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 - Cosmetics: $0.16M revenue
 - High-Demand SKUs: SKU51, SKU38, SKU31, SKU90, and SKU2 generate the most revenue.
 
+
 ### Inventory & Stock Management
+
+![Dashboard](Screenshot (159).png)
+
 - Total Stock Level: 4,777 units.
 - Stock Distribution: Kolkata (30.12%) holds the most inventory, followed by Mumbai and Bangalore.
 - Stock Imbalance: Some SKUs have excessive stock, while certain fast-moving products frequently go out of stock.
 
 ### Supplier Performance
+
+![Dashboard](Screenshot (160).png)
+
 - Top Supplier by Profit Margin: Supplier 3 (91%), followed by Supplier 2 (87%) and Supplier 5 (85%).
 - High-Cost Suppliers: Supplier 2 and Supplier 4 have higher procurement costs.
 
@@ -35,11 +43,17 @@ This project analyzes supply chain data to identify inefficiencies, optimize inv
 - Defect rates were calculated using DAX measures in Power BI.
 
 ### Manufacturing Efficiency & Quality Control
+
+![Dashboard](Screenshot (161).png)
+
 - Average Manufacturing Lead Time: 14.77 days.
 - Inspection Delays: 44.6% of products are still pending inspection, increasing supply chain bottlenecks.
 - Product Failures: 33.2% of inspected products failed quality checks, impacting customer satisfaction.
 
 ### Logistics & Shipping Performance
+
+![Dashboard](Screenshot (162).png)
+
 **Total Shipping Cost Distribution:**
 - Carrier B (42.7%) incurs the highest shipping cost.
 - Sea Freight: Highest profit margin (89.27%) but slowest delivery.
