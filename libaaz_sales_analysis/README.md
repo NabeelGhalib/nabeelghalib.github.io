@@ -189,7 +189,7 @@ END
 - Utilized this calculated field to analyze sales data by age categories, enabling deeper insights into customer demographics.
 - Enabled action filters in Tableau, allowing users to interactively explore the data and dynamically drill down into specific time periods (2013-2017, 2022-2024) to view corresponding metrics.
 
-Tableau Dashboard - [Dashboard](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/Dashboard%201%20(2)%20(2).png)
+Tableau Dashboard - ![Dashboard](https://github.com/NabeelGhalib/nabeelghalib.github.io/blob/main/libaaz_sales_analysis/Dashboard%201%20(2)%20(2).png)
 
 
 ### 5.Final Report (PowerPoint):
