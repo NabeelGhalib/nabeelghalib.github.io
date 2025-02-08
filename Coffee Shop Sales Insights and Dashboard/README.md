@@ -1,4 +1,4 @@
-# Coffee Shop Sales Analysis & Reporting  
+# Coffee Shop Sales Insights and Dashboard  
 
 
 
