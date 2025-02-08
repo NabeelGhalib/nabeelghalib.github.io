@@ -10,22 +10,22 @@ This project analyzes sales data from a coffee shop to identify trends, customer
 ## Tools & Techniques Used  
 
 ### Data Consolidation & Cleaning  
-- XLOOKUP, INDEX-MATCH: Merged and consolidated order details from different sheets into a structured Orders Sheet.  
-- Data Cleaning: Removed duplicates, handled missing values, and standardized formats.  
+- **XLOOKUP, INDEX-MATCH:** Merged and consolidated order details from different sheets into a structured Orders Sheet.  
+- **Data Cleaning:** Removed duplicates, handled missing values, and standardized formats.  
 
 ### Analysis & Visualization  
-- Pivot Tables: Summarized total sales, revenue, and customer behavior.  
-- Pivot Charts & Dashboard: Created interactive visualizations for key insights.  
-- Calculated Fields: Used custom calculations for revenue trends and customer segmentation.  
+- **Pivot Tables:** Summarized total sales, revenue, and customer behavior.  
+- **Pivot Charts & Dashboard:** Created interactive visualizations for key insights.  
+- **Calculated Fields:** Used custom calculations for revenue trends and customer segmentation.  
 
 ---
 
 ## Key Insights  
 
 ### Overall Sales Performance  
-- Total Revenue: $45,134  
-- Total Quantity Sold: 3,551 units  
-- Total Orders: 1,000  
+- Total Revenue: **$45,134**  
+- Total Quantity Sold: **3,551 units**  
+- Total Orders: **1,000**  
 
 ### Monthly Sales Trends  
 | Month  | Revenue ($) |
@@ -87,7 +87,7 @@ This project analyzes sales data from a coffee shop to identify trends, customer
 | 1.0 kg | 875 |
 | 2.5 kg | 841 |
 
-- Smaller packages (0.5 kg) sell the most. This indicates a preference for smaller quantities, but promotions on larger packs may increase bulk purchases.  
+- **Smaller packages (0.5 kg)** sell the most. This indicates a preference for smaller quantities, but promotions on larger packs may increase bulk purchases.  
 
 ### Roast Type Preference  
 | Roast Type | Quantity Sold |
@@ -123,8 +123,8 @@ An **interactive dashboard** was built in Excel using:
 1. Increase inventory for high-selling months (March & June) to prevent stockouts.  
 2. Boost marketing efforts in the United States since it accounts for 79% of revenue.  
 3. Loyalty Programs:
-  - Convert non-loyalty customers into loyalty members by offering incentives such as first-time discounts, exclusive deals, or early access to new products.
-  - Enhance the loyalty program by introducing tier-based rewards, where higher spending unlocks better discounts, encouraging repeat purchases  
+      - Convert non-loyalty customers into loyalty members by offering incentives such as first-time discounts, exclusive deals, or early access to new products.
+      - Enhance the loyalty program by introducing tier-based rewards, where higher spending unlocks better discounts, encouraging repeat purchases  
 4. Promote larger coffee packs (1.0 kg & 2.5 kg) to increase bulk purchases.  
 5. Stock more Light Roast coffee as it is the most preferred type.  
 
