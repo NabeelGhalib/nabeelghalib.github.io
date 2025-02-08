@@ -1,5 +1,7 @@
 # Coffee Shop Sales Analysis & Reporting  
 
+Excel Workbook -> [Excel workbook](coffee_sales_analysis.xlsx)
+
 ## Objective  
 This project analyzes sales data from a coffee shop to identify trends, customer preferences, and business insights using Pivot Tables, Pivot Charts and buliding a interactive dashboard in Excel.  
 
@@ -94,6 +96,24 @@ Light Roast is the most preferred roast type.
 
 ---
 
+## Excel Dashboard  
+
+![Dashboard](Dashboard.png)
+
+An **interactive dashboard** was built in Excel using:  
+✔ Pivot Charts for **trend analysis** and **sales comparison**  
+✔ Slicers for **dynamic filtering** by **month, year, and coffee type**  
+ 
+
+**Dashboard Features:**  
+- A summary of total sales, orders, and revenue  
+- Seasonality sales trend visualization  
+- Customer segmentation analysis  
+- Product performance breakdown by revenue and quantity
+- Country wise revenue  
+
+ ---
+
 ## Recommendations  
 
 1. Increase inventory for high-selling months (March & June) to prevent stockouts.  
@@ -109,4 +129,3 @@ This Coffee Shop Sales Analysis provided valuable insights into sales trends, cu
 
 ---
 
-## Repository Structure  
