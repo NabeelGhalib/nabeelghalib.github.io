@@ -3,9 +3,9 @@
 ## Overview
 This project analyzes supply chain data to identify inefficiencies, optimize inventory management, and improve operational performance. The analysis was conducted using MySQL for data processing and exploratory analysis, followed by Power BI for data transformation, visualization, and insight generation.
 
-SQL Queries -> [Queries](supply_chain_queries.sql) 
+**SQL Queries ->** [Queries](supply_chain_queries.sql) 
 
-Power Bi Dashboard -> [Dashboard](supply_chain.pbix)
+**Power Bi Dashboard ->** [Dashboard pbix](supply_chain.pbix), [Dashboard pdf](supply_chain_dashboard.pdf))
 
 ## Tools & Technologies Used
 - **Database Management & Analysis:** MySQL
